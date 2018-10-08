@@ -12,6 +12,7 @@ var server = http.createServer(function(req, res) {
 // Chargement de socket.io
 var io = require('socket.io').listen(server);
 
+//Connection event handler
 io.sockets.on('connection', function (socket) {
     socket.on('checkName', function(nom){
         socket.nom = nom;
